@@ -7,8 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "UMSocial.h"
+#import "ShareBottomView.h"
 
-@interface ViewController : UIViewController
+
+@interface ViewController : UIViewController <UMSocialUIDelegate>
 
 
 @end

@@ -1,0 +1,19 @@
+//
+//  UmengSharePrefix.pch
+//  umengShareDemo
+//
+//  Created by jamalping on 15-3-3.
+//  Copyright (c) 2015年 jamalping. All rights reserved.
+//
+
+#ifndef umengShareDemo_UmengSharePrefix_pch
+#define umengShareDemo_UmengSharePrefix_pch
+
+// Include any system framework and library headers here that should be included in all compilation units.
+// You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
+#ifdef __OBJC__
+
+    #import "Prefix.h"
+
+#endif
+#endif

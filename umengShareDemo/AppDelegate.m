@@ -7,6 +7,9 @@
 //
 
 #import "AppDelegate.h"
+#import "ViewController.h"
+#import "UMSocial.h"
+#import "UMSocialQQHandler.h"
 
 @interface AppDelegate ()
 
@@ -16,7 +19,22 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
+    self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     // Override point for customization after application launch.
+    self.window.backgroundColor = [UIColor whiteColor];
+    [self.window makeKeyAndVisible];
+    
+    ViewController *baseVC = [[ViewController alloc] init];
+    UINavigationController *navigation = [[UINavigationController alloc] initWithRootViewController:baseVC];
+    self.window.rootViewController = navigation;
+    
+    //设置友盟Appkey
+    [UMSocialData setAppKey:UmengAppKey];
+    
+//    [UMSocialWechatha]
+    
+    //如果你要支持不同的屏幕方向，需要这样设置，否则在iPhone只支持一个竖屏方向
+    [UMSocialConfig setSupportedInterfaceOrientations:UIInterfaceOrientationMaskAll];
     return YES;
 }
 
