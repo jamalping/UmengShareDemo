@@ -38,8 +38,8 @@
 
 - (void)shareButton {
     [UIView animateWithDuration:0.35 animations:^{
-        _markView.alpha = 1;
-        _shareBottomView.frame = CGRectMake(0, kScreenHeight -300, 320, 300 );
+//        _markView.alpha = 1;
+//        _shareBottomView.frame = CGRectMake(0, kScreenHeight -300, 320, 300 );
     }];
 }
 
