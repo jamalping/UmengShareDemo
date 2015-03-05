@@ -10,10 +10,11 @@
 #import "ViewController.h"
 #import "UMSocial.h"
 #import "UMSocialQQHandler.h"
+#import "UMSocialWechatHandler.h"
 
 @interface AppDelegate ()
 
-@end
+@end    
 
 @implementation AppDelegate
 
@@ -31,7 +32,8 @@
     //设置友盟Appkey
     [UMSocialData setAppKey:UmengAppKey];
     
-//    [UMSocialWechatha]
+//    [UMSocialWechatHandler setWXAppId:<#(NSString *)#> appSecret:<#(NSString *)#> url:<#(NSString *)#>];
+//    [UMSocialQQHandler setQQWithAppId:<#(NSString *)#> appKey:<#(NSString *)#> url:<#(NSString *)#>]
     
     //如果你要支持不同的屏幕方向，需要这样设置，否则在iPhone只支持一个竖屏方向
     [UMSocialConfig setSupportedInterfaceOrientations:UIInterfaceOrientationMaskAll];

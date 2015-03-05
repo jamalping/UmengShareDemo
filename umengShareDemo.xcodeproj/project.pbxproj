@@ -39,8 +39,8 @@
 		739B26A61AA6DC8300783DAD /* TencentOpenApi_IOS_Bundle.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 739B269B1AA6DC8300783DAD /* TencentOpenApi_IOS_Bundle.bundle */; };
 		739B26A71AA6DC8300783DAD /* libSocialWechat.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 739B269E1AA6DC8300783DAD /* libSocialWechat.a */; };
 		739B26A81AA6DC8300783DAD /* libWeChatSDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 739B269F1AA6DC8300783DAD /* libWeChatSDK.a */; };
-		739B26AE1AA70ED100783DAD /* ShareBottomView.m in Sources */ = {isa = PBXBuildFile; fileRef = 739B26AD1AA70ED100783DAD /* ShareBottomView.m */; };
 		739B26B01AA7102600783DAD /* shareButton@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 739B26AF1AA7102600783DAD /* shareButton@2x.png */; };
+		739B26B31AA7F82B00783DAD /* ShareView.m in Sources */ = {isa = PBXBuildFile; fileRef = 739B26B21AA7F82B00783DAD /* ShareView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -111,9 +111,9 @@
 		739B26A01AA6DC8300783DAD /* UMSocialWechatHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UMSocialWechatHandler.h; sourceTree = "<group>"; };
 		739B26A11AA6DC8300783DAD /* WXApi.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WXApi.h; sourceTree = "<group>"; };
 		739B26A21AA6DC8300783DAD /* WXApiObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WXApiObject.h; sourceTree = "<group>"; };
-		739B26AC1AA70ED100783DAD /* ShareBottomView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShareBottomView.h; sourceTree = "<group>"; };
-		739B26AD1AA70ED100783DAD /* ShareBottomView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShareBottomView.m; sourceTree = "<group>"; };
 		739B26AF1AA7102600783DAD /* shareButton@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "shareButton@2x.png"; sourceTree = "<group>"; };
+		739B26B11AA7F82B00783DAD /* ShareView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ShareView.h; path = ../ShareView.h; sourceTree = "<group>"; };
+		739B26B21AA7F82B00783DAD /* ShareView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ShareView.m; path = ../ShareView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -186,8 +186,8 @@
 				739B25D71AA5BA0D00783DAD /* AppDelegate.m */,
 				739B25D91AA5BA0D00783DAD /* ViewController.h */,
 				739B25DA1AA5BA0D00783DAD /* ViewController.m */,
-				739B26AC1AA70ED100783DAD /* ShareBottomView.h */,
-				739B26AD1AA70ED100783DAD /* ShareBottomView.m */,
+				739B26B11AA7F82B00783DAD /* ShareView.h */,
+				739B26B21AA7F82B00783DAD /* ShareView.m */,
 				739B25DC1AA5BA0D00783DAD /* Main.storyboard */,
 				739B25DF1AA5BA0D00783DAD /* Images.xcassets */,
 				739B25E11AA5BA0D00783DAD /* LaunchScreen.xib */,
@@ -422,10 +422,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				739B26B31AA7F82B00783DAD /* ShareView.m in Sources */,
 				739B25DB1AA5BA0D00783DAD /* ViewController.m in Sources */,
 				739B25D81AA5BA0D00783DAD /* AppDelegate.m in Sources */,
 				739B25D51AA5BA0D00783DAD /* main.m in Sources */,
-				739B26AE1AA70ED100783DAD /* ShareBottomView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
