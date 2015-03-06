@@ -33,10 +33,10 @@
     shareView = [[ShareView alloc] initWithFrame:CGRectMake(0, 0, kScreenWidth, 300) shareAction:^(UIButton *button) {
         [shareView dismiss];
         switch (button.tag) {
-            case shareSinaWeibo:
+            case shareSinaWeibo:{
                 // 判断是否授权
                 if ([UMSocialAccountManager isOauthAndTokenNotExpired:UMShareToSina]) { // 授权了，直接分享
-                   NSLog(@"sina weibo share");
+                    NSLog(@"sina weibo share");
                     [UMSocialSnsPlatformManager getSocialPlatformWithName:UMShareToSina].snsClickHandler(self, [UMSocialControllerService defaultControllerService], YES);
                 }else { // 未授权，进行授权
                     [UMSocialSnsPlatformManager getSocialPlatformWithName:UMShareToSina].loginClickHandler(self, [UMSocialControllerService defaultControllerService], YES, ^(UMSocialResponseEntity *response){
@@ -46,8 +46,8 @@
                         }
                     });
                 }
-                break;
-            case shareTencentWeibo:
+            }break;
+            case shareTencentWeibo:{
                 if ([UMSocialAccountManager isOauthAndTokenNotExpired:UMShareToTencent]) {
                     NSLog(@"tencent weibo share");
                     [UMSocialSnsPlatformManager getSocialPlatformWithName:UMShareToTencent].snsClickHandler(self, [UMSocialControllerService defaultControllerService], YES);
@@ -58,8 +58,9 @@
                             NSLog(@"username is %@, uid is %@, token is %@",snsAccount.userName,snsAccount.usid,snsAccount.accessToken);
                         }
                     });
-                }break;
-            case shareQzone:
+                }
+            }break;
+            case shareQzone:{
                 if ([UMSocialAccountManager isOauthAndTokenNotExpired:UMShareToQzone]) {
                     NSLog(@"shareQzoneshare");
                     [UMSocialSnsPlatformManager getSocialPlatformWithName:UMShareToTencent].snsClickHandler(self, [UMSocialControllerService defaultControllerService], YES);
@@ -70,8 +71,9 @@
                             NSLog(@"username is %@, uid is %@, token is %@",snsAccount.userName,snsAccount.usid,snsAccount.accessToken);
                         }
                     });
-                }break;
-            case shareQQfriend:
+                }
+            }break;
+            case shareQQfriend:{
                 if ([UMSocialAccountManager isOauthAndTokenNotExpired:UMShareToQQ]) {
                     [[UMSocialDataService defaultDataService] postSNSWithTypes:@[UMShareToQQ] content:@"QQ空间的分享" image:nil location:nil urlResource:nil presentedController:self completion:^(UMSocialResponseEntity *response) {
                         if (response.responseCode == UMSResponseCodeSuccess) {
@@ -86,8 +88,9 @@
                             NSLog(@"username is %@, uid is %@, token is %@",snsAccount.userName,snsAccount.usid,snsAccount.accessToken);
                         }
                     });
-                }break;
-            case shareWchart:
+                }
+            }break;
+            case shareWchart:{
                 if ([UMSocialAccountManager isOauthAndTokenNotExpired:UMShareToWechatTimeline]) {
 //                    [[UMSocialDataService defaultDataService] postSNSWithTypes:@[UMShareToQQ] content:@"QQ空间的分享" image:nil location:nil urlResource:nil presentedController:self completion:^(UMSocialResponseEntity *response) {
 //                        if (response.responseCode == UMSResponseCodeSuccess) {
@@ -108,8 +111,9 @@
 //                            NSLog(@"username is %@, uid is %@, token is %@",snsAccount.userName,snsAccount.usid,snsAccount.accessToken);
 //                        }
 //                    });
-                }break;
-            case shareWfriend:
+                }
+            }break;
+            case shareWfriend:{
                 NSLog(@"Wfriend share");
                 [[UMSocialDataService defaultDataService] postSNSWithTypes:@[UMShareToWechatSession] content:@"微信好友分享" image:nil location:nil urlResource:nil presentedController:self completion:^(UMSocialResponseEntity *response) {
                     if (response.responseCode == UMSResponseCodeSuccess) {
@@ -117,7 +121,7 @@
                         NSLog(@"微信朋友圈分享成功！");
                     }
                 }];
-                break;
+            }break;
             default:
                 break;
         }

@@ -32,7 +32,7 @@
     //设置友盟Appkey
     [UMSocialData setAppKey:UmengAppKey];
     
-//    [UMSocialWechatHandler setWXAppId:<#(NSString *)#> appSecret:<#(NSString *)#> url:<#(NSString *)#>];
+    [UMSocialWechatHandler setWXAppId:weixinAppKey appSecret:weixinAppSecret url:@"www.baidu.com"];
 //    [UMSocialQQHandler setQQWithAppId:<#(NSString *)#> appKey:<#(NSString *)#> url:<#(NSString *)#>]
     
     //如果你要支持不同的屏幕方向，需要这样设置，否则在iPhone只支持一个竖屏方向
